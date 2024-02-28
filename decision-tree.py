@@ -32,3 +32,13 @@ X[0:5]
 # train-test split
 from sklearn.model_selection import train_test_split
 X_trainset, X_testset, y_trainset, y_testset = train_test_split(X, y, test_size=0.3, random_state=3)
+
+# modeling
+drugTree = DecisionTreeClassifier(criterion="entropy", max_depth = 4)
+drugTree # it shows the default parameters
+drugTree.fit(X_trainset,y_trainset)
+
+# prediction
+predTree = drugTree.predict(X_testset)
+print (predTree [0:5])
+print (y_testset [0:5])
