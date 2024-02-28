@@ -29,3 +29,6 @@ X[:,3] = le_Chol.transform(X[:,3])
 
 X[0:5]
 
+# train-test split
+from sklearn.model_selection import train_test_split
+X_trainset, X_testset, y_trainset, y_testset = train_test_split(X, y, test_size=0.3, random_state=3)
