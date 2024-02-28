@@ -42,3 +42,8 @@ drugTree.fit(X_trainset,y_trainset)
 predTree = drugTree.predict(X_testset)
 print (predTree [0:5])
 print (y_testset [0:5])
+
+# evaluation
+from sklearn import metrics
+import matplotlib.pyplot as plt
+print("DecisionTrees's Accuracy: ", metrics.accuracy_score(y_testset, predTree))
